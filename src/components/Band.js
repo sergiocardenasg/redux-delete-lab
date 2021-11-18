@@ -1,10 +1,11 @@
 import React from 'react'
 
 const Band = (props) => {
+    //console.log(props.band)
     return (
-        <div> 
+        <div>
             <li> {props.band.name} </li>
-            <button onClick={() => props.delete(props.id)}>Delete</button>
+            <button onClick={() => props.deleteBand(props.band.id)}>Delete</button>
         </div>
     );
 };

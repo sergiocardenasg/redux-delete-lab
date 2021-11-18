@@ -7,7 +7,7 @@ export default function manageBand(state = {
     case "ADD_BAND":
       const band = {
         id: uuid(),
-        name: action.name,
+        name: action.name.name,
       };
       return {bands: state.bands.concat(band)}
     case "DELETE_BAND":
