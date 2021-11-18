@@ -8,7 +8,7 @@ class BandsContainer extends Component {
     return(
       <ul>
         <BandInput addBand={this.props.addBand}/>
-        <Bands bands={this.props.bands} delete={this.props.delete}/>
+        <Bands bands={this.props.bands} deleteBand={this.props.deleteBand}/>
       </ul>
     )
   }
@@ -21,7 +21,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     addBand: name => dispatch({type: "ADD_BAND", name}), 
-    delete: id => dispatch({type: "DELETE_BAND", id}),
+    deleteBand: id => dispatch({type: "DELETE_BAND", id})
   }
 }
 
